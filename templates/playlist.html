@@ -1,0 +1,27 @@
+<div id="playlist" class="module" data-module="playlist">
+
+<div class="module_settings"><span>Settings</span></div>
+<div class="module_remove"><span>Remove</span></div>
+
+<h2>{{ title }}</h2>
+
+{% if playlist %}
+	<ul>
+	{% if playlist.playlist_items %}
+		{% for item in playlist.playlist_items %}
+			<li class="get">
+				{{ item.label }}
+				<span class="span">
+					{% if item.currently_playing %}
+						<a class="li_buttons" id="current">Currently Playing!</a>
+					{% endif %}
+				</span>
+			</li>
+		{% endfor %}
+	{% endif %}
+	</ul>
+{% endif %}
+{% if message %}
+	<div class="message">{{ message }}</div>
+{% endif %}
+</div>

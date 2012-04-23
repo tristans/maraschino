@@ -390,6 +390,14 @@ AVAILABLE_MODULES = [
             },
         ]
     },
+    {
+        'name': 'playlist',
+        'label': 'Playlist',
+        'description': 'playlist info',
+        'static': False,
+        'poll': 10,
+        'delay': 0,
+    },
 ]
 
 MISC_SETTINGS = [
